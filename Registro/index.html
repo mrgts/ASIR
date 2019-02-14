@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="icon" type="image/png" href="assets/img/favicon2.ico">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie.edge">
+	<title>Registro</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+	<div class="divregister">
+		<div class="container">
+			<div class="divcont">	
+				<h1>{{ title }}</h1>
+				<h4><h4>
+				<form @submit.prevent="sendform()">
+					<input type="text" v-if="form.type!=0"  v-if="form.type==1" placeholder="Nombre" >
+					<input type="email" :class="{'error':validaEmail}" placeholder="Email" v-model="form.email">
+					<input type="password" v-if="form.type!=2" :class="{'error':validaPassword}" placeholder="Contraseña" v-model="form.password">
+					<input type="password" v-if="form.type==1" :class="{'error':validaRepetirPassword}" placeholder="Repetir contraseña" v-model="form.passwordos">
+					<select name="area" v-if="form.type!=0">
+						<option value="0" selected>Área de conocimiento</option>
+						<option value="1">Matemática</option>
+						<option value="2">Programación</option>
+						<option value="3">Física</option>
+						<option value="4">Idiomas</option>
+					</select>
+					<button>Enviar</button>
+					
+					<a href="javascript:void(0)" @click="form.type=2" v-if="form.type!=2" >Recuper contraseña</a>
+                    <a href="javascript:void(0)" @click="form.type=1" v-if="form.type!=1" >Registrarme</a>
+                    <a href="javascript:void(0)" @click="form.type=0" v-if="form.type!=0" >Iniciar sesión</a>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script src="assets/js/vue.js"></script>
+	<script src="assets/js/registro.js"></script>
+
+
+
+</body>
+</html>

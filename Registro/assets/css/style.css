@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
+html,body{
+
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+	height: 100vh;
+	font-family: "Lato";
+	color: 47525E;
+}
+.divregister{
+
+	background: url(../img/back4.jpg) no-repeat;
+	background-size: cover;
+	background-position: center center;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	
+}
+.divregister .container{
+	width: 100%;
+	text-align: center;
+
+}
+.divregister .container .divcont{
+    width: 100%;
+    max-width: 300px;
+    background: rgba(71,82,94,0.7);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+}
+.divregister .container .divcont h3{
+	margin-top: 0px;
+	
+}
+.divregister .container .divcont input{
+	height: 20px;
+	margin: 0px;
+	border: 0px;
+	outline: none;
+	padding: 10px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	width: 70%;
+}
+
+.divregister .container .divcont select{
+	 background: ;
+     border: none;
+     font-size: 14px;
+     height: 30px;
+     padding: 5px;
+     width: 250px;
+     border-radius: 3px;
+     margin-bottom: 10px;
+}
+
+.divregister .container .divcont button{
+	margin: 0px;
+	border: 0px;
+	display: block;
+	margin: auto;
+	padding: 10px 30px;
+	background: #333;
+	color: #fff;
+}
+.divregister .container .divcont input.error{
+	border-bottom: 3px solid red;
+}
+
+.divregister .container .divcont a{
+	font-size: 12px;
+	margin-right: 15px;
+	color: #fff
+
+}
