@@ -19,9 +19,11 @@
 					<input type="email" :class="{'error':validaEmail}" placeholder="Email" v-model="form.email">
 					<input type="password" v-if="form.type!=2" :class="{'error':validaPassword}" placeholder="Contraseña" v-model="form.password">
 					<input type="password" v-if="form.type==1" :class="{'error':validaRepetirPassword}" placeholder="Repetir contraseña" v-model="form.passwordos">
-					<select v-model="areas" v-if="form.type!=0" v-show="form.type!=2">	
+					<!--<h4 v-if="form.type!=0" v-show="form.type!=2">Área de conocimiento</h4>//Opcional//-->
+					<select v-model="form.areas" v-if="form.type!=0" v-show="form.type!=2">	
 						<option v-for="area in areas">{{ area }}</option>
 					</select>
+
 					<button>Enviar</button>
 					
 					<a href="javascript:void(0)" @click="form.type=2" v-if="form.type!=2" >Recuper contraseña</a>
