@@ -19,12 +19,8 @@
 					<input type="email" :class="{'error':validaEmail}" placeholder="Email" v-model="form.email">
 					<input type="password" v-if="form.type!=2" :class="{'error':validaPassword}" placeholder="Contraseña" v-model="form.password">
 					<input type="password" v-if="form.type==1" :class="{'error':validaRepetirPassword}" placeholder="Repetir contraseña" v-model="form.passwordos">
-					<select name="area" v-if="form.type!=0" v-show="form.type!=2">	
-						<option value="0" selected>Área de conocimiento</option>
-						<option value="1">Matemática</option>
-						<option value="2">Programación</option>
-						<option value="3">Física</option>
-						<option value="4">Idiomas</option>
+					<select v-model="main" v-if="form.type!=0" v-show="form.type!=2">	
+						<option v-for="area in areas">{{ area }}</option>
 					</select>
 					<button>Enviar</button>
 					

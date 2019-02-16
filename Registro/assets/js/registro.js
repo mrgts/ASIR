@@ -4,7 +4,8 @@ new Vue({
 		form:{
 			type:0, /// login=0, registro=1, recuperar contraseña=2
 			email:"",
-			password:""}
+			password:""},
+		areas:['Matemáticas','Programación', 'etc'],	
 			
 	},
 	methods:{
