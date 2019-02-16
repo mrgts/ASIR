@@ -14,12 +14,12 @@
 			<div class="divcont">	
 				<h1>{{ title }}</h1>
 				<h4><h4>
-				<form @submit.prevent="sendform()">
+				<form class="formulario" @submit.prevent="sendform()">
 					<input type="text" v-if="form.type!=0"  v-show="form.type!=2" placeholder="Nombre" >
 					<input type="email" :class="{'error':validaEmail}" placeholder="Email" v-model="form.email">
 					<input type="password" v-if="form.type!=2" :class="{'error':validaPassword}" placeholder="Contraseña" v-model="form.password">
 					<input type="password" v-if="form.type==1" :class="{'error':validaRepetirPassword}" placeholder="Repetir contraseña" v-model="form.passwordos">
-					<select v-model="main" v-if="form.type!=0" v-show="form.type!=2">	
+					<select v-model="areas" v-if="form.type!=0" v-show="form.type!=2">	
 						<option v-for="area in areas">{{ area }}</option>
 					</select>
 					<button>Enviar</button>
