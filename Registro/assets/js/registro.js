@@ -2,7 +2,7 @@ new Vue({
 	el:".divregister",
 	data:{
 		form:{
-			type:0, /// login=0, registro=2-recuperar contraseña
+			type:0, /// login=0, registro=1, recuperar contraseña=2
 			email:"",
 			password:""}
 			
@@ -56,7 +56,7 @@ new Vue({
 			}
 		},
 		title(){
-			return (this.form.type==0)?'Login':(this.form.type==1)?'Registro':'Recuperar contraseña';
+			return (this.form.type==0)?'Iniciar sesión':(this.form.type==1)?'Registro':'Recuperar contraseña';
 		}
 
 	}
