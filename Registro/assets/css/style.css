@@ -2,44 +2,40 @@
 
 html,body{
 
-	padding: 0px;
-	margin: 0px;
-	width: 100%;
-	height: 100vh;
-	font-family: "Lato";
-	color: 47525E;
+	
 }
 .divregister{
 
-	background: url(../img/back4.jpg) no-repeat;
+	background: url(../img/back3.jpg) no-repeat;
 	background-size: cover;
 	background-position: center center;
 	width: 100%;
-	height: 100vh;
+	height: 130vh;
 	display: flex;
 	align-content: center;
 	align-items: center;
 	
 }
 .divregister .container{
-	width: 100%;
+	width: 200%;
 	text-align: center;
 
 }
 .divregister .container .divcont{
     width: 100%;
-    max-width: 300px;
+    height: :500px;
+    max-width: 500px;
     background: rgba(71,82,94,0.7);
-    padding: 20px;
-    border-radius: 10px;
+    padding: 30px;
+    border-radius: 5px;
     display: inline-block;
 }
-.divregister .container .divcont h3{
-	margin-top: 0px;
+.divregister .container .divcont h1 h3{
+	margin-top: 20px;
 	
 }
 .divregister .container .divcont input{
-	height: 20px;
+	height: 50px;
 	margin: 0px;
 	border: 0px;
 	outline: none;
@@ -50,8 +46,8 @@ html,body{
 }
 
 .divregister .container .divcont select{
-	 background: ;
-     border: none;
+	 background:;
+	 border: none;
      font-size: 14px;
      height: 30px;
      padding: 5px;

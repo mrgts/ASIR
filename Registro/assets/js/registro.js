@@ -59,7 +59,7 @@ new Vue({
 			}
 		},
 		title(){
-			return (this.form.type==0)?'Iniciar sesión':(this.form.type==1)?'Registro':'Recuperar contraseña';
+			return (this.form.type==0)?'INICIAR SESIÓN':(this.form.type==1)?'REGISTRO':'RECUPERAR CONTRASEÑA';
 		}
 
 	}
