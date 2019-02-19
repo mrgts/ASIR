@@ -10,11 +10,28 @@ new Vue({
 		areas:['Matemáticas','Programación', 'etc'],	
 			
 	},
-	methods:{
+	methods:{	
+			
 		sendform(){
-			if(this.validaType()){
+			if(this.form.type== 0 && !this.validaEmail && !this.validaPassword){
 				console.log(this.form)
+				window.location="mentor.html"
+				return true;
 			}
+			else if(this.form.type== 1 && !this.validaEmail && !this.validaRepetirPassword){
+				console.log(this.form)
+				alert("Porfavor confirma tu correo!")
+				window.location="index.html"
+				return true;
+			}
+			else if(this.form.type== 2 && !this.validaEmail){
+				console.log(this.form)
+				alert("Porfavor revisa tu corre, te hemos enviado un link para recuperar tu contraseña");
+				return true;
+				
+			}
+
+			return false;
 		},
 		validaType(){
 			if(this.form.type== 0 && !this.validaEmail && !this.validaPassword){
@@ -24,7 +41,7 @@ new Vue({
 				return true;
 			}
 			else if(this.form.type== 2 && !this.validaEmail){
-				return true
+				return true;
 			}
 			return false;
 		}

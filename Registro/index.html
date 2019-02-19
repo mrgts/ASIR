@@ -75,24 +75,17 @@
           <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum mauris ut diam vulputate, nec scelerisque magna maximus,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum mauris ut diam vulputate, nec scelerisque magna maximus.</p>
         </div>
       </div>
-      <div class="text-center mt-4">
-        <a class="btn btn-xl btn-outline-light" href="#">
-          <i class="fas fa-download mr-2"></i>
-          Download Now!
-        </a>
-      </div>
     </div>
   </section>
-  <section id="login">
-    <div class="divregister">
+  <!--Register Section-->
+  <div class="divregister" id="login">
     <div class="container">
       <div class="divcont"> 
         <h1>{{ title }}</h1>
-        <h4><h4>
-        <form class="formulario" @submit.prevent="sendform()">
-          <input type="text" v-if="form.type!=0"  v-show="form.type!=2" placeholder="Nombre" >
-          <input type="email" :class="{'error':validaEmail}" placeholder="Email" v-model="form.email">
-          <input type="password" v-if="form.type!=2" :class="{'error':validaPassword}" placeholder="Contraseña" v-model="form.password">
+        <form class="formulario" @submit.prevent="sendform()" name="divregister">
+          <input type="text" v-if="form.type!=0"  v-show="form.type!=2" placeholder="Nombre" required >
+          <input type="email" :class="{'error':validaEmail}" placeholder="Email" v-model="form.email" >
+          <input type="password" v-if="form.type!=2" :class="{'error':validaPassword}" placeholder="Contraseña" v-model="form.password" >
           <input type="password" v-if="form.type==1" :class="{'error':validaRepetirPassword}" placeholder="Repetir contraseña" v-model="form.passwordos">
           <h4 v-if="form.type!=0" v-show="form.type!=2">Área de conocimiento</h4>
           <select v-model="form.areas" v-if="form.type!=0" v-show="form.type!=2"> 
@@ -102,13 +95,12 @@
           <button>Enviar</button>
           
           <a href="javascript:void(0)" @click="form.type=2" v-if="form.type!=2" >Recuper contraseña</a>
-                    <a href="javascript:void(0)" @click="form.type=1" v-if="form.type!=1" >Registrarme</a>
-                    <a href="javascript:void(0)" @click="form.type=0" v-if="form.type!=0" >Iniciar sesión</a>
+          <a href="javascript:void(0)" @click="form.type=1" v-if="form.type!=1" >Registrarme</a>
+          <a href="javascript:void(0)" @click="form.type=0" v-if="form.type!=0" >Iniciar sesión</a>
         </form>
       </div>
     </div>
   </div>
-  </section>
   <!-- Contact Section -->
   <section class="bg-primary" id="contact">
     <div class="container">
