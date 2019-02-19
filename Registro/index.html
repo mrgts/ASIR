@@ -83,7 +83,7 @@
       <div class="divcont"> 
         <h1>{{ title }}</h1>
         <form class="formulario" @submit.prevent="sendform()" >
-          <input type="text" v-if="form.type!=0"  v-show="form.type!=2" placeholder="Nombre">
+          <input type="text" v-if="form.type!=0"  v-show="form.type!=2" placeholder="Nombre" v-model="form.name">
           <input type="email" :class="{'error':validaEmail}" placeholder="Email" v-model="form.email" >
           <input type="password" v-if="form.type!=2" :class="{'error':validaPassword}" placeholder="Contraseña" v-model="form.password" >
           <input type="password" v-if="form.type==1" :class="{'error':validaRepetirPassword}" placeholder="Repetir contraseña" v-model="form.passwordos">
@@ -225,6 +225,26 @@
   <script src="js/webjs.min.js"></script>
   <script src="assets/js/vue.js"></script>
   <script src="assets/js/registro.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAlAQ4b77rd4k60zNatwqBZY35Qtv0es2s",
+      authDomain: "asir-cfae6.firebaseapp.com",
+      databaseURL: "https://asir-cfae6.firebaseio.com",
+      projectId: "asir-cfae6",
+      storageBucket: "asir-cfae6.appspot.com",
+      messagingSenderId: "841322826348"
+    };
+    firebase.initializeApp(config);
+
+    //Referencia a la base de datos
+    const db = firebase.database();
+
+    
+  </script>
   
 
 

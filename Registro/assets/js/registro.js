@@ -1,11 +1,13 @@
+
 new Vue({
 	el:".divregister",
 	data:{
 		form:{
 			type:0, /// login=0, registro=1, recuperar contraseña=2
+			name:"",
 			email:"",
 			password:"",
-			area:""},
+			},
 
 		areas:['Matemáticas','Programación', 'etc'],	
 			
@@ -15,18 +17,35 @@ new Vue({
 		sendform(){
 			if(this.form.type== 0 && !this.validaEmail && !this.validaPassword){
 				console.log(this.form)
-				window.location="mentor.html"
+				swindow.location=""
 				return true;
 			}
 			else if(this.form.type== 1 && !this.validaEmail && !this.validaRepetirPassword){
 				console.log(this.form)
-				alert("Porfavor confirma tu correo!")
-				window.location="index.html"
+				
+				//window.location=""
+				db.ref('/user/index/registro')
+				.push({
+					type: this.form.type,
+					name: this.form.name,
+					email: this.form.email,
+					password: this.form.password,
+					passwordos: this.form.passwordos,
+					areas: this.form.areas
+				}).then(() =>{
+					this.form.type = '',
+					this.form.name = '',
+					this.form.email = '',
+					this.form.password = '',
+					this.form.passwordos = '',
+					this.form.areas = ''
+				});
+				alert("Registro completo, porfavor confirma tu correo!");
 				return true;
 			}
 			else if(this.form.type== 2 && !this.validaEmail){
 				console.log(this.form)
-				alert("Porfavor revisa tu corre, te hemos enviado un link para recuperar tu contraseña");
+				//alert("Porfavor revisa tu corre, te hemos enviado un link para recuperar tu contraseña");
 				return true;
 				
 			}
