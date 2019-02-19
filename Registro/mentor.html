@@ -33,6 +33,7 @@
           <option v-for="area in areas">{{ area }}</option>
         </select>
         <input type="text" name="" placeholder="Encuentra lo que buscas">
+        
         <i class="icono fas fa-search"></i>
         <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
@@ -48,9 +49,23 @@
           </li>
         </ul>
       </div>
-      <i class="icono far fa-heart"></i>
-      <i class="icono far fa-bell"></i>
-      <i class="user far fa-user-circle"></i>
+      <li class="list-inline-item">
+        <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+          <i class="far fa-heart"></i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+          <i class="far fa-bell"></i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+          <i class="far fa-user-circle"></i>
+        </a>
+      </li>
+      
+      
       
     </div>
   </nav>
