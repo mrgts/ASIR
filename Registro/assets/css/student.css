@@ -56,10 +56,16 @@ select:focus{ outline: none;}
 	padding: 10px;
 	border-radius: 5px;
 	margin-bottom: 10px;
-	width: 30%;
+	width: 40%;
 }
 .icono{
 	font-size: 30px;
 	color: #aaa;
 	padding: 10px;
+}
+.user{
+	font-size: 40px;
+	color: #aaa;
+	padding: 10px;
+
 }
