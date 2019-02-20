@@ -9,7 +9,7 @@ new Vue({
 			password:"",
 			},
 
-		areas:['Matemáticas','Programación', 'etc'],	
+		areas:['Matemáticas','Programación', 'Humanidades','etc'],
 			
 	},
 	methods:{	
