@@ -1,0 +1,22 @@
+{
+  "name": "asir",
+  "version": "1.0.0",
+  "description": "Vue.js UI A sample ususing Vue.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrgts/ASIR.git"
+  },
+  "author": "team ASIR",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mrgts/ASIR/issues"
+  },
+  "homepage": "https://github.com/mrgts/ASIR#readme",
+  "dependencies": {
+    "vue-event-calendar": "^1.5.2"
+  }
+}
