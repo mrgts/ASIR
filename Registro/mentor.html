@@ -10,6 +10,7 @@
 	<link rel="icon" type="image/png" href="assets/img/favicon2.ico">
 	<link rel="stylesheet" type="text/css" href="assets/css/mentor.css">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <script src="https://apis.google.com/js/api.js" type="text/javascript"></script>
 
 	<!-- Bootstrap core CSS -->
 	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -28,7 +29,7 @@
 	<!-- Navigation -->
   <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
     <div class="container" id=>
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">ASIR</a>
+      <a class="navbar-brand js-scroll-trigger" href="index.html">ASIR</a>
       
         <select  class="caja" v-model="form.areas"> 
           <option v-for="area in areas">{{ area }}</option>
@@ -46,7 +47,7 @@
             <a class="nav-link py-3 px-0 px-lg-3  rounded js-scroll-trigger" href="#mainNav">Tutor</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="">Estudiante</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href=""><del>Estudiante</del></a>
           </li>
         </ul>
       </div>
@@ -67,16 +68,45 @@
       </li>
     </div>
   </nav>
-  <div class="rectangle" > 
+  <div class="rectangle"  id="#mainNav"> 
    <h1 class="dash">Dashboard del tutor</h1> 
-   <button formaction="" type="submit" class="btn btn-primary btn-xl" id="sendMessageButton"  onclick="window.location.href='cmentoria3.html'">Siguiente</button>
+   <div align="left" class="form-group">
+        <button formaction="" type="submit" class="tuto btn btn-primary " id="sendMessageButton" onclick="window.location.href=''" >Tutorías</button>
+     
+     
+        <button formaction="" type="submit" class="calen btn btn-primary " id="sendMessageButton" onclick="window.location.href='https://calendar.google.com/calendar/r/week/2019/2/13?pli=1'" >Calendario</button>
+     
+        <button formaction="" type="submit" class="cali btn btn-primary " id="sendMessageButton" onclick="window.location.href=''" >Calificaciones</button>
+         <button formaction="" type="submit" class="ofrecer btn btn-primary " id="sendMessageButton" onclick="window.location.href='cmentoria.html'" >Ofrecer tutoría</button>
+    </div>
+   
+    
   </div>
 
   <!--Mentoría-->
-  <section class="mentor">
-
-    
-  </section>
+  <div class="mentor">
+    <div class="wall">
+        <div class="colum1 ">
+          <div><img src="img/chicken.png"></div>
+            
+            <h2>Maternidad de gallinas</h2>
+            <p class="lead2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum mauris ut diam vulputate, nec scelerisque magna maximus</p>
+          </div>
+        <div class="colum1">
+        <div><img src="img/chicken.png"></div>
+            
+            <h2>Maternidad de gallinas</h2>
+            <p class="lead2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum mauris ut diam vulputate, nec scelerisque magna maximus</p>
+          </div>
+        <div class="colum1  ">
+        <div><img src="img/chicken.png"></div>
+            
+            <h2>Maternidad de gallinas</h2>
+            <p class="lead2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum mauris ut diam vulputate, nec scelerisque magna maximus</p>
+          </div>
+        </div>
+    </div>
+  </div>
 		
 	</div>
  <!-- Footer -->

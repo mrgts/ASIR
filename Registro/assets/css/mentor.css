@@ -10,6 +10,7 @@
 	display: flex;
 	align-content: center;
 	align-items: center;
+	text-align: center;
 	
 }
 .caja {
@@ -70,7 +71,3 @@ select:focus{ outline: none;}
 	padding: 10px;
 
 }
-.ofrecer{
-	height: 50px;
-    width: 100px;
-    bottom: 1000px;}
