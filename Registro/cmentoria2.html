@@ -52,11 +52,16 @@
     <div class="progress-bar" role="progressbar" style="width: 66%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 <section class="bg-primary" id="">
-    <div  class="container">
+    <div  align="center" class="container">
         <h4 v-if="form.type!=0" v-show="form.type!=2">Área de conocimiento</h4>
         <select v-model="form.areas" v-if="form.type!=0" v-show="form.type!=2" >
             <option v-for="area in areas" selected="1">{{ area }}</option>
+
         </select>
+        <div align="right" class="form-group">
+            <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Siguiente</button>
+        </div>
+
 
 
     </div>
