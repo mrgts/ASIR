@@ -17,7 +17,7 @@ new Vue({
 		sendform(){
 			if(this.form.type== 0 && !this.validaEmail && !this.validaPassword){
 				console.log(this.form)
-				swindow.location=""
+				window.location=""
 				return true;
 			}
 			else if(this.form.type== 1 && !this.validaEmail && !this.validaRepetirPassword){
