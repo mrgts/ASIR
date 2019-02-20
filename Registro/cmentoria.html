@@ -61,7 +61,21 @@
 <div class="rectangle" >  <h1 class="dash">Dashboard del tutor</h1> </div>
 <br>
 
- <div class="progress"  style="height: 30px;">
+    <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
+    <script>
+        ;
+        ((d, c, f) => {
+            const config = {
+                apiKey: "AIzaSyA-PEfy880E6VlYJNBuKmP_sdB4FaOp3kQ",
+                authDomain: "edfirebase-6f24b.firebaseapp.com",
+                databaseURL: "https://edfirebase-6f24b.firebaseio.com",
+                projectId: "edfirebase-6f24b",
+                storageBucket: "edfirebase-6f24b.appspot.com",
+                messagingSenderId: "971660403208"
+            }
+            f.initializeApp(config)
+
+            <div class="progress"  style="height: 30px;">
     <div class="progress-bar" role="progressbar" style="width: 33%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 <section class="bg-primary" id="">
@@ -87,20 +101,19 @@
         </a>
   </div>
 
-  <!-- Bootstrap core JavaScript -->
+
   <script src="vendor/jquery/jquery.min.js"></script>
    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 
-  <!-- Plugin JavaScript -->
-  <!--<script src="web/vendor/jquery-easing/jquery.easing.min.js"></script>-->
+
   <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
   <!-- Contact Form JavaScript -->
   <script src="js/jqBootstrapValidation.js"></script>
   <script src="js/contact_me.js"></script>
 
-  <!-- Custom scripts for this template -->
+
   <script src="js/webjs.min.js"></script>
 
   <script src="assets/js/vue.js"></script>

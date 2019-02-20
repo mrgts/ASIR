@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CRUD con Firebase</title>
+</head>
+
+<body>
+<h1>CRUD con Firebase</h1>
+<h2>Lista de Contactos</h2>
+<h3>Create / Update</h3>
+<form>
+    <input type="text" id="name" placeholder="Tu nombre" required>
+    <br>
+    <input type="email" id="email" placeholder="Tu email" required>
+    <br>
+    <input type="hidden" id="id">
+    <input type="submit" value="Salvar">
+</form>
+<h3>Read / Delete</h3>
+<ul id="contacts"></ul>
+<script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
+<script>
+    ;
+    ((d, c, f) => {
+        const config = {
+            apiKey: "AIzaSyA80VR4KbE0vDFhoY2vm6EWCyujkSaAjD4",
+            authDomain: "asir-82afb.firebaseapp.com",
+            databaseURL: "https://asir-82afb.firebaseio.com",
+            projectId: "asir-82afb",
+            storageBucket: "asir-82afb.appspot.com",
+            messagingSenderId: "819784759071"
+        }
+        f.initializeApp(config)
+        const db = f.database(),
+            contactsRef = db.ref().child('contacts'),
+            contactsForm = d.forms[0],
+            contactName = d.getElementById('name'),
+            contactEmail = d.getElementById('email'),
+            contactId = d.getElementById('id'),
+            contacts = d.getElementById('contacts')
+        function contactTemplate({ name, email }) {
+            return `
+          <span class="name">${name}</span>
+          -
+          <span class="email">${email}</span>
+          <button class="edit">Editar</button>
+          <button class="delete">Eliminar</button>
+        `
+        }
+
+        contactsForm.addEventListener('submit', e => {
+            e.preventDefault()
+            //alert('Procesando form')
+            let id = contactId.value || contactsRef.push().key,
+                contactData = {
+                    name: contactName.value,
+                    email: contactEmail.value
+                },
+                updateData = {}
+            updateData[`/${id}`] = contactData
+            contactsRef.update(updateData)
+            contactId.value = ''
+            contactsForm.reset()
+        })
+        //READ
+        contactsRef.on('child_added', data => {
+            let li = d.createElement('li')
+            li.id = data.key
+            li.innerHTML = contactTemplate(data.val())
+            contacts.appendChild(li)
+        })
+        contactsRef.on('child_changed', data => {
+            let affectedNode = d.getElementById(data.key)
+            affectedNode.innerHTML = contactTemplate(data.val())
+        })
+        contactsRef.on('child_removed', data => {
+            let affectedNode = d.getElementById(data.key)
+            contacts.removeChild(affectedNode)
+        })
+        d.addEventListener('click', e => {
+            let affectedNode = e.target.parentElement
+            //UPDATE
+            if (e.target.matches('button.edit')) {
+                //c('Click', affectedNode)
+                contactName.value = affectedNode.querySelector('.name').innerText
+                contactEmail.value = affectedNode.querySelector('.email').innerText
+                contactId.value = affectedNode.id
+            }
+            //UPDATE
+            if (e.target.matches('button.delete')) {
+                //c('Click', affectedNode)
+                let id = affectedNode.id
+                db.ref(`contacts/${id}`).remove()
+            }
+        })
+    })(document, console.log, firebase);
+</script>
+</body>
+
+</html>
