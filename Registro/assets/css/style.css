@@ -78,7 +78,7 @@ html,body{
 }
 .rectangle {
 	height: 250px;
-	width:1440px;
+	width:100%;
 	padding-top: 150px;
 	background-color: #8190A5;
 	font-family: "Lato", sans-serif;
@@ -112,4 +112,80 @@ html,body{
 	width: 1000px;
 	margin-left: auto;
 	margin-right: auto;
+}
+.ofrecer{
+	height: 40px;
+    width: 150px;
+    margin-left: 400px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    }
+ .tuto{
+ 	height: 40px;
+    width: 150px;
+    margin-right: 20px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+ }
+.calen{
+	height: 40px;
+    width: 150px;
+    margin-right: 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    
+
+}
+.cali{
+	height: 40px;
+    width: 150px;
+    margin-right: 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+
+}
+.wall{
+	background-color:  #2c3e50;
+	background-size: cover;
+	background-position: center center;
+	width: 97%;
+	height: 90vh;
+	display: flex;
+	align-content: left;
+	align-items: left;
+	text-align:left;
+	margin: 20px 20px;}
+
+
+.colum1{
+  background-color: #8190A5;
+  height:  85%;
+  padding: 100px;
+  margin: 25px;
+  font-size: 15px;
+  align-content:left;
+  text-align: left;
+	align-content: left;
+	align-items: left;
+	
+  
+  /* IMPORTANTE */
+  display: inline-block;
+
+}
+.text{
+	width: 200%;
+	text-align: left;
+	align-content: left;
+	align-items: left;
+	text-align: left;
+	 
+ 
+  
+
+}
+img{
+	width: 30%;
+
 }

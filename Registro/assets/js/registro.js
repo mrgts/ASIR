@@ -1,4 +1,3 @@
-
 new Vue({
 	el:".divregister",
 	data:{
@@ -17,7 +16,7 @@ new Vue({
 		sendform(){
 			if(this.form.type== 0 && !this.validaEmail && !this.validaPassword){
 				console.log(this.form)
-				window.location=""
+				window.location="mentor.html"
 				return true;
 			}
 			else if(this.form.type== 1 && !this.validaEmail && !this.validaRepetirPassword){
